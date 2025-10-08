@@ -5,7 +5,7 @@ const useProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios('./trendingData.json').then((data) => setProducts(data.data));
+    axios('../trendingData.json').then((data) => setProducts(data.data));
   }, []);
 
   return { products };
