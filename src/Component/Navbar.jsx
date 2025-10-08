@@ -24,10 +24,10 @@ const Navbar = () => {
             Installation
           </NavLink>
         </div>
-        <div className="flex gap-3 items-center bg-gradient-to-br  from-[#632EE3] to-[#9F62F2] text-white  px-4 py-2 rounded-md">
-          <img className="w-5 h-5" src={gitlogo} alt="" />
-          <a href="https://github.com/sakib-git">Contribute</a>
-        </div>
+        <a href="https://github.com/sakib-git" target="_blank" className="flex gap-3 items-center bg-gradient-to-br from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-md">
+          <img className="w-5 h-5" src={gitlogo} alt="GitHub Logo" />
+          Contribute
+        </a>
       </div>
     </div>
   );
