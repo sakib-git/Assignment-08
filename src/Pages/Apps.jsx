@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useProducts from '../Hook/useProducts';
 import ProductCard from '../Component/ProductCard';
+import errorImg from '../assets/App-Error.png';
 
 const Apps = () => {
   const [search, setSearch] = useState('');
@@ -14,14 +15,22 @@ const Apps = () => {
         <h2 className="text-2xl md:text-4xl font-bold">Our All Applications</h2>
         <p className="text-[#627382]">Explore All Apps on the Market developed by us. We code for Millions</p>
       </div>
-      <div className="flex justify-between items-center max-md:px-4 py-3">
-        <p className="text-lg font-medium text-gray-700">
+      <div className="flex  justify-between items-center max-md:flex-col max-md:px-4 max-md:gap-4 py-3">
+        <p className="text-lg font-medium max-md:text-3xl text-gray-700">
           (<span className="font-bold text-black">{searchProducts.length}</span>) Apps Found
         </p>
 
         <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Type here" className="input" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 max-md:px-4 ">{searchProducts.length > 0 ? searchProducts.map((product) => <ProductCard key={product.id} product={product} />) : <p className="col-span-full text-center text-xl font-semibold text-red-500">No data found</p>}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 max-md:px-4 ">
+        {searchProducts.length > 0 ? (
+          searchProducts.map((product) => <ProductCard key={product.id} product={product} />)
+        ) : (
+          <div className="flex col-span-full  justify-center ">
+            <img className="object-contain" src={errorImg} alt="No data found" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

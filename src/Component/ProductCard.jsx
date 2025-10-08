@@ -1,13 +1,13 @@
 import React from 'react';
 import downloadIcon from '../assets/icon-downloads.png';
 import rating from '../assets/icon-ratings.png';
+import { NavLink } from 'react-router';
 
 const ProductCard = ({ product }) => {
-  console.log(product);
-  const { title, downloads, ratingAvg, image } = product;
+  const { title, downloads, ratingAvg, image, id } = product;
 
   return (
-    <div className="bg-white shadow  flex flex-col">
+    <NavLink to={`/appdetails/${id}`} className="bg-white shadow  flex flex-col">
       <img className="w-full h-40 object-cover" src={image} alt={title} />
       <div className="p-4 flex flex-col flex-1 justify-between">
         <h2 className="font-bold text-2xl">{title}</h2>
@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 
