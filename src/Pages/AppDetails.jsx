@@ -11,11 +11,23 @@ const AppDetails = () => {
   const { products } = useProducts();
   const productFind = products.find((product) => product.id === parseInt(id));
 
-  const { image, description, ratingAvg, ratings, reviews, companyName, title, downloads } = productFind || {};
-  const handleInstall = (id) => {
-    console.log(id);
-    installApp(id);
+  const { image, description, ratingAvg, ratings, reviews, companyName, title, downloads, Mb } = productFind || {};
+
+  const handleInstall = () => {
+    const installList = JSON.parse(localStorage.getItem('installPage')) || [];
+
+    const alreadyInstalled = installList.some((item) => item.id === productFind.id);
+
+    if (alreadyInstalled) {
+      alert('Already added!');
+      return;
+    }
+
+    const updateData = [...installList, productFind];
+
+    localStorage.setItem('installPage', JSON.stringify(updateData));
   };
+
   return (
     <div>
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 max-sm:px-4">
@@ -52,9 +64,9 @@ const AppDetails = () => {
               </div>
             </div>
 
-            <NavLink onClick={() => handleInstall(id)} to="/install" className="mt-9 bg-[#00d390] text-white px-2 py-2 w-full max-w-[200px] font-semibold rounded-md text-center max-md:mx-auto">
-              Install Now
-            </NavLink>
+            <button onClick={handleInstall} className="mt-9 bg-[#00d390] text-white px-2 py-2 w-full max-w-[200px] font-semibold rounded-md text-center max-md:mx-auto">
+              Install Now ({Mb} MB)
+            </button>
           </div>
         </div>
 
