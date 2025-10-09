@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useParams } from 'react-router';
 import useProducts from '../Hook/useProducts';
 import downloadimg from '../assets/icon-downloads.png';
@@ -9,7 +9,18 @@ import { toast } from 'react-toastify';
 
 const AppDetails = () => {
   const { id } = useParams();
-  const { products } = useProducts();
+  const { products, loading } = useProducts();
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen ">
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+      </div>
+    );
+  }
   const productFind = products.find((product) => product.id === parseInt(id));
 
   const { image, description, ratingAvg, ratings, reviews, companyName, title, downloads, Mb } = productFind || {};

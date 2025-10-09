@@ -3,12 +3,17 @@ import { useEffect, useState } from 'react';
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios('../trendingData.json').then((data) => setProducts(data.data));
+    setLoading(true);
+    axios('../trendingData.json')
+      .then((data) => setProducts(data.data))
+      .catch((error) => error)
+      .finally(() => setLoading(false));
   }, []);
 
-  return { products };
+  return { products, loading };
 };
 
 export default useProducts;

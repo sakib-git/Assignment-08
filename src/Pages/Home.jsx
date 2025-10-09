@@ -5,8 +5,20 @@ import ProductCard from '../Component/ProductCard';
 import { NavLink } from 'react-router';
 
 const Home = () => {
-  const { products } = useProducts();
+  const { products, loading } = useProducts();
   // console.log(products);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen ">
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+      </div>
+    );
+  }
   const someProducts = products.splice(0, 8);
   return (
     <div>

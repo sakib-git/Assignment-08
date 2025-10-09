@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 
 const Installation = () => {
   const [installPage, setinstallPage] = useState([]);
+  const [sortOrder, setSort] = useState('none');
+
   useEffect(() => {
     const saveList = JSON.parse(localStorage.getItem('installPage')) || [];
     if (saveList) setinstallPage(saveList);
@@ -21,6 +23,16 @@ const Installation = () => {
     localStorage.setItem('installPage', JSON.stringify(updateremove));
   };
 
+  const sortedItem = (() => {
+    if (sortOrder === 'rating-asc') {
+      return [...installPage].sort((a, b) => a.ratingAvg - b.ratingAvg);
+    } else if (sortOrder === 'rating-desc') {
+      return [...installPage].sort((a, b) => b.ratingAvg - a.ratingAvg);
+    } else {
+      return installPage;
+    }
+  })();
+
   return (
     <div>
       <div className="max-w-[1440px] mx-auto">
@@ -30,18 +42,18 @@ const Installation = () => {
         </div>
 
         <div className="flex justify-between items-center max-sm:px-4">
-          <h2 className="text-2xl font-bold text-gray-600"> {installPage.length} Apps Found</h2>
-          {/* <label>
+          <h2 className="text-2xl font-bold text-gray-600"> {sortedItem.length} Apps Found</h2>
+          <label>
             <select className="select select-bordered" value={sortOrder} onChange={(e) => setSort(e.target.value)}>
               <option value="none">Sort by Rating</option>
               <option value="rating-asc">Low-&t;Higth</option>
               <option value="rating-desc">Higth-&t;Low</option>
             </select>
-          </label> */}
+          </label>
         </div>
         <div className="mt-10 flex gap-4 flex-col">
           {installPage.length > 0 ? (
-            installPage.map((install) => (
+            sortedItem.map((install) => (
               <div key={install.id} className="flex justify-between items-center p-4 bg-white shadow rounded-md mb-4">
                 <div className="flex gap-5 items-center">
                   <img className="h-16 w-16 object-cover rounded-lg" src={install.image} alt={install.title} />

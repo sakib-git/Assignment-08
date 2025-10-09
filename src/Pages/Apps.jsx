@@ -5,9 +5,21 @@ import errorImg from '../assets/App-Error.png';
 
 const Apps = () => {
   const [search, setSearch] = useState('');
-  const { products } = useProducts();
+  const { products, loading } = useProducts();
   const term = search.trim().toLowerCase();
   const searchProducts = term ? products.filter((product) => product.title.toLowerCase().includes(term)) : products;
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen ">
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+        <span className="loading loading-ring loading-lg text-primary"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-[1440px] py-5">
