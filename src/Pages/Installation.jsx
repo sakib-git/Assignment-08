@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import downloadimg from '../assets/icon-downloads.png';
 import avergeImg from '../assets/icon-ratings.png';
 import errorImg from '../assets/App-Error.png';
+import { toast } from 'react-toastify';
 
 const Installation = () => {
   const [installPage, setinstallPage] = useState([]);
@@ -14,8 +15,12 @@ const Installation = () => {
     const saveList = JSON.parse(localStorage.getItem('installPage')) || [];
     let updateremove = saveList.filter((r) => r.id !== id);
     setinstallPage(updateremove);
+    if (updateremove) {
+      toast.success('Uninstall');
+    }
     localStorage.setItem('installPage', JSON.stringify(updateremove));
   };
+
   return (
     <div>
       <div className="max-w-[1440px] mx-auto">
@@ -26,7 +31,13 @@ const Installation = () => {
 
         <div className="flex justify-between items-center max-sm:px-4">
           <h2 className="text-2xl font-bold text-gray-600"> {installPage.length} Apps Found</h2>
-          <h2>sort</h2>
+          {/* <label>
+            <select className="select select-bordered" value={sortOrder} onChange={(e) => setSort(e.target.value)}>
+              <option value="none">Sort by Rating</option>
+              <option value="rating-asc">Low-&t;Higth</option>
+              <option value="rating-desc">Higth-&t;Low</option>
+            </select>
+          </label> */}
         </div>
         <div className="mt-10 flex gap-4 flex-col">
           {installPage.length > 0 ? (

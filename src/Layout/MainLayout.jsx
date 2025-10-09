@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Component/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../Component/Footer';
-import Banner from '../Component/Banner';
+import { ToastContainer } from 'react-toastify';
 
 const MainLayout = () => {
   return (
@@ -12,6 +12,7 @@ const MainLayout = () => {
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

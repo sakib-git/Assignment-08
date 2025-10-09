@@ -249,6 +249,7 @@
     "reviews": 1200,
     "ratingAvg": 4.7,
     "downloads": 1.2,
+    "Mb": 121,
     "ratings": [
       { "name": "1 star", "count": 45 },
       { "name": "2 star", "count": 60 },
@@ -305,6 +306,7 @@
     "reviews": 860,
     "ratingAvg": 4.6,
     "downloads": 3,
+    "Mb": 34,
     "ratings": [
       { "name": "1 star", "count": 40 },
       { "name": "2 star", "count": 55 },
@@ -342,6 +344,7 @@
     "reviews": 1300,
     "ratingAvg": 4.4,
     "downloads": 3,
+    "Mb": 54,
     "ratings": [
       { "name": "1 star", "count": 100 },
       { "name": "2 star", "count": 120 },

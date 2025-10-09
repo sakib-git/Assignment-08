@@ -5,6 +5,7 @@ import downloadimg from '../assets/icon-downloads.png';
 import avergeImg from '../assets/icon-ratings.png';
 import reviewimg from '../assets/icon-review.png';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -17,10 +18,11 @@ const AppDetails = () => {
     const installList = JSON.parse(localStorage.getItem('installPage')) || [];
 
     const alreadyInstalled = installList.some((item) => item.id === productFind.id);
-
     if (alreadyInstalled) {
-      alert('Already added!');
+      toast.error('Already Installed');
       return;
+    } else if (installList) {
+      toast.success('Installed');
     }
 
     const updateData = [...installList, productFind];
