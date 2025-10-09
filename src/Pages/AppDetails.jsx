@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { NavLink, useParams } from 'react-router';
 import useProducts from '../Hook/useProducts';
 import downloadimg from '../assets/icon-downloads.png';
