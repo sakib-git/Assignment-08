@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Pixel Runner 3D 76",
+    "title": "Pixel Runner",
     "companyName": "Innovatech Labs",
     "image": "https://i.ibb.co/8Dtwvs94/pixel-runner-dawn-stockcake.jpg",
     "description": "This is the description for Pixel Runner 3D 76. It helps you manage your daily life and tasks efficiently.",
@@ -35,7 +35,7 @@
   },
   {
     "id": 2,
-    "title": "Finance Tracker Pro 49",
+    "title": "Finance Tracker",
     "companyName": "Global Devs",
     "image": "https://i.ibb.co/VWDNCWDj/regularly-keep-track-your-expenses-260nw-2274231043.webp",
     "description": "This is the description for Finance Tracker Pro 49. It helps you manage your daily life and tasks efficiently.",
@@ -69,7 +69,7 @@
   },
   {
     "id": 3,
-    "title": "Daily Recipes 35",
+    "title": "Daily Recipes",
     "companyName": "SoftStream Studio",
     "image": "https://i.ibb.co/x8Kx07BK/Good-Morning-Bangkok-Salad-wordpress.webp",
     "description": "This is the description for Daily Recipes 35. It helps you manage your daily life and tasks efficiently.",
@@ -103,7 +103,7 @@
   },
   {
     "id": 4,
-    "title": "AI Photo Editor 88",
+    "title": "AI Photo Editor",
     "companyName": "Apex Solutions",
     "image": "https://i.ibb.co/607kYKtx/one-click-automatic-photo-enhancement-using-Fotor-AI-photo-editor-1.jpg",
     "description": "This is the description for AI Photo Editor 88. It helps you manage your daily life and tasks efficiently.",
@@ -138,7 +138,7 @@
 
   {
     "id": 5,
-    "title": "Code Snippet Vault 42",
+    "title": "Code Snippet Vault",
     "companyName": "Health Flow Inc.",
     "image": "https://i.ibb.co/xKd0vpYW/Word-Press-code-snippets-1120x630.png",
     "description": "This is the description for Code Snippet Vault 42. It helps you manage your daily life and tasks efficiently.",
@@ -172,7 +172,7 @@
   },
   {
     "id": 6,
-    "title": "Virtual Yoga Studio 93",
+    "title": "Virtual Yoga Studio",
     "companyName": "Innovatech Labs",
     "image": "https://i.ibb.co/LDsnYGFg/14-virtual-yoga-class-1-1-609x240.png",
     "description": "This is the description for Virtual Yoga Studio 93. It helps you manage your daily life and tasks efficiently.",
@@ -207,7 +207,7 @@
 
   {
     "id": 7,
-    "title": "Weather Now 24/7 23",
+    "title": "Weather Now ",
     "companyName": "Apex Solutions",
     "image": "https://i.ibb.co/1tPRxGgg/images.jpg",
     "description": "This is the description for Weather Now 24/7 23. It helps you manage your daily life and tasks efficiently.",
@@ -280,7 +280,7 @@
   {
     "id": 10,
     "image": "https://i.ibb.co/WvbbLMS9/Encrypted-Messaging-Icon.png",
-    "title": "Chatly - Secure Messenger",
+    "title": "Secure Messenger",
     "companyName": "HeroSoft",
     "description": "Stay connected with friends and family with end-to-end encrypted chat, voice, and video calls.",
     "size": 62,
@@ -299,7 +299,7 @@
   {
     "id": 11,
     "image": "https://i.ibb.co/vCvjv7MV/original-e6806c2faffac2977e17f5a5489317c5.webp",
-    "title": "FinPal - Expense Tracker",
+    "title": "FinPal -Tracker",
     "companyName": "MoneyMate",
     "description": "Easily manage your expenses, set monthly budgets, and visualize your spending habits with smart analytics.",
     "size": 48,
@@ -337,7 +337,7 @@
   {
     "id": 13,
     "image": "https://i.ibb.co/b59TQRmy/shopwise-logo-bg.png",
-    "title": "ShopWise - Smart Shopping App",
+    "title": "Smart Shopping App",
     "companyName": "SmartCart Ltd",
     "description": "Compare prices, track deals, and get real-time discounts from thousands of online stores in one app.",
     "size": 80,
@@ -356,7 +356,7 @@
   {
     "id": 14,
     "image": "https://i.ibb.co/Z6jSTQC4/2023-08-16-64dd34d948baa.jpg",
-    "title": "MusicFlow - Stream & Listen",
+    "title": "MusicFlow - Stream ",
     "companyName": "BeatLab",
     "description": "Listen to millions of songs, create playlists, and enjoy personalized music recommendations every day.",
     "size": 110,
@@ -375,7 +375,7 @@
   {
     "id": 15,
     "image": "https://i.ibb.co/1YsLJFmv/5v7n-Mw-ZRMf-Ya-Sc-Fn2-BK4p-K.jpg",
-    "title": "LearnIt - Skill Learning App",
+    "title": " Skill Learning App",
     "companyName": "HeroSoft",
     "description": "Learn coding, design, and business skills with video lessons, quizzes, and interactive projects.",
     "size": 77,
@@ -394,7 +394,7 @@
   {
     "id": 16,
     "image": "https://i.ibb.co/0y6WF9cD/unnamed.png",
-    "title": "GameHub - All in One Gaming",
+    "title": "GameHub",
     "companyName": "PlaySphere",
     "description": "Discover and play trending mobile games, join gaming communities, and compete in tournaments.",
     "size": 150,
@@ -451,7 +451,7 @@
   {
     "id": 19,
     "image": "https://i.ibb.co/23dxRhWf/ebookreaders-2048px-9581.webp",
-    "title": "ReadWise - Ebook Reader",
+    "title": "Ebook Reader",
     "companyName": "BookVerse",
     "description": "Read, highlight, and save your favorite ebooks with a personalized reading experience and note sync.",
     "size": 68,

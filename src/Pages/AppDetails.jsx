@@ -58,26 +58,26 @@ const AppDetails = () => {
 
             <div className="flex gap-20 mt-5 max-sm:flex-col max-sm:mx-auto">
               <div>
-                <img className="w-6 h-6" src={downloadimg} alt="" />
+                <img className="w-6 max-sm:w-3  h-6 max-sm:h-3" src={downloadimg} alt="" />
                 <p>Downloads</p>
                 <p className="font-bold text-2xl">{downloads}M</p>
               </div>
 
               <div>
-                <img className="w-6 h-6" src={avergeImg} alt="" />
+                <img className="w-6 max-sm:w-3  h-6 max-sm:h-3" src={avergeImg} alt="" />
                 <p>Average Ratings</p>
                 <p className="font-bold text-2xl">{ratingAvg}</p>
               </div>
 
               <div>
-                <img className="w-6 h-6" src={reviewimg} alt="" />
+                <img className="w-6 max-sm:w-3  h-6 max-sm:h-3" src={reviewimg} alt="" />
                 <p>Total Reviews</p>
                 <p className="font-bold text-2xl">{reviews}K</p>
               </div>
             </div>
 
             <button onClick={handleInstall} className="mt-9 bg-[#00d390] text-white px-2 py-2 w-full max-w-[200px] font-semibold rounded-md text-center max-md:mx-auto">
-              Install Now ({Mb} MB)
+              {`Install Now (${Mb} MB)`}
             </button>
           </div>
         </div>

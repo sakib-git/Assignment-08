@@ -35,33 +35,34 @@ const Installation = () => {
 
   return (
     <div>
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto  ">
         <div className="text-center py-10 space-y-5">
-          <h3 className="max-md:text-3xl text-4xl font-bold ">Your Installed Apps </h3>
+          <h3 className="max:mdtext-2xl text-4xl font-bold ">Your Installed Apps </h3>
           <p className="text-gray-600">Explore All Trending Apps on the Market developed by us</p>
         </div>
 
-        <div className="flex justify-between items-center max-sm:px-4">
-          <h2 className="text-2xl font-bold text-gray-600"> {sortedItem.length} Apps Found</h2>
+        <div className="flex justify-between items-center max-sm:px-4 max-sm:flex-col  max-sm:gap-6">
+          <h2 className="text-2xl max-sm:text-3xl font-bold text-gray-600"> {sortedItem.length} Apps Found</h2>
           <label>
-            <select className="select select-bordered" value={sortOrder} onChange={(e) => setSort(e.target.value)}>
+            <select className="  select select-bordered max-sm:w-80 " value={sortOrder} onChange={(e) => setSort(e.target.value)}>
               <option value="none">Sort by Rating</option>
               <option value="rating-asc">Low-&t;Higth</option>
               <option value="rating-desc">Higth-&t;Low</option>
             </select>
           </label>
         </div>
+
         <div className="mt-10 flex gap-4 flex-col">
           {installPage.length > 0 ? (
             sortedItem.map((install) => (
               <div key={install.id} className="flex justify-between items-center p-4 bg-white shadow rounded-md mb-4">
-                <div className="flex gap-5 items-center">
+                <div className="flex max-sm:gap-2 gap-5 items-center">
                   <img className="h-16 w-16 object-cover rounded-lg" src={install.image} alt={install.title} />
 
                   <div className="flex flex-col justify-between">
-                    <h2 className="text-lg font-semibold text-gray-800">{install.title}</h2>
+                    <h2 className="text-lg font-semibold text-gray-800 max-sm:text-base">{install.title}</h2>
 
-                    <div className="flex items-center gap-8 mt-2">
+                    <div className="flex items-center max-sm:gap-2 gap-8 mt-2">
                       <div className="flex items-center gap-2">
                         <img className="w-4 h-4" src={downloadimg} alt="Downloads" />
                         <p className="text-gray-600">{install.downloads}M</p>
