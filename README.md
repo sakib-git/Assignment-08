@@ -1,16 +1,44 @@
-# React + Vite
+# App store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Preview: **[App store](https://assignment-08-eta-six.vercel.app/)**
 
-Currently, two official plugins are available:
+> A simple Demo App Store with clean layouts, product details, and a smooth, responsive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### ✨ Features
 
-## React Compiler
+- App Cards – Displays apps with basic details.
+- Responsive Layout – Works on all screen sizes.
+- Simple Navigation – Easy and smooth browsing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+#### 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — Single-page app architecture with modular components.
+- **Tailwind CSS** — Utility-first styling for fast and consistent UI.
+
+#### 🧑‍💻 Dependencies
+
+```json
+"dependencies": {
+  "@tailwindcss/vite": "^4.1.14",
+  "axios": "^1.12.2",
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "react-router": "^7.9.3",
+  "react-toastify": "^11.0.5",
+  "recharts": "^3.2.1",
+  "tailwindcss": "^4.1.14"
+}
+```
+
+#### ⚙️ Run this project
+
+- Open terminal and run the commands
+
+```bash
+git clone https://github.com/sakib-git/Assignment-08.git
+cd Assignment-08
+npm i
+npm run dev
+```
